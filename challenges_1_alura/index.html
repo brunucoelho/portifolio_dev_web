@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <title>Decodificador</title>
+  </head>
+  <body>
+    <header class="cabecalho">
+      <img src="./assets/Logo.png" alt="Logo Alura" />
+    </header>
+    <main>
+      <section class="container">
+        <div class="entrada">
+          <div class="entrada-codigo">
+            <textarea
+              name="text"
+              id="text"
+              cols="30"
+              rows="10"
+              class="entrada-codigo-input"
+              placeholder="Digite seu texto"
+            ></textarea>
+          </div>
+          <div class="entrada-texto">
+            <div class="entrada-texto-alerta">
+              <img src="./assets/bi_exclamation-circle-fill.png" alt="" />
+              <p>Apenas letras minúsculas e sem acento.</p>
+            </div>
+
+            <div class="botoes">
+              <button
+                onclick="alternarVisibilidade('myIMG'), alternarVisibilidade('myIMG2'), criptografar()"
+                class="botao botao-azul"
+              >
+                Criptografar
+              </button>
+              <button class="botao botao-cinza" onclick="decriptografar()">
+                Descriptografar
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="saida-texto">
+          <textarea
+            name="text"
+            id="text_saida"
+            cols="30"
+            rows="10"
+            class="saida-codigo-input"
+          ></textarea>
+          <img
+            src="./assets/High_quality_products_1_1-removebg-preview.png"
+            alt="imagem busca"
+            id="myIMG"
+            class="img-saida"
+          />
+          <div class="saida-texto-msg" id="myIMG2">
+            <h2 class="saida-h2">Nenhuma mensagem encontrada</h2>
+            <p class="saida-p">
+              Digite um texto que você deseja criptografar ou descriptografar.
+            </p>
+            <p id="saidaText" class="saida-p saida-cripto"></p>
+          </div>
+          <div class="botao-copiar">
+            <button
+              id="copiarBotao"
+              class="botao botao-cinza2"
+              onclick="copiarTexto()"
+            >
+              Copiar
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p class="rodape">
+        Desenvolvido por
+        <a href="https://www.github.com/brunucoelho">@brunucoelho</a>
+      </p>
+    </footer>
+    <script src="app.js"></script>
+  </body>
+</html>

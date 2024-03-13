@@ -1,0 +1,269 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
+:root {
+  --color-one: #0a3871;
+  --color-two: #d8dfe8;
+  --color-three: #ffffff;
+  --color-font: #343a40;
+
+  --fonte-one: "Inter", sans-serif;
+  --fonte-two: ;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: var(--fonte-one);
+}
+
+html {
+  background-color: var(--color-two);
+}
+
+.cabecalho {
+  display: block;
+  /* position: absolute; */
+}
+
+.cabecalho img {
+  position: relative;
+  top: 2.5rem; /* ajuste conforme necessário */
+  left: 2.5rem; /* ajuste conforme necessário */
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+}
+
+.entrada {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  gap: 22rem;
+}
+
+.entrada-codigo {
+  display: flex;
+  flex-flow: row;
+  align-items: flex-end;
+  position: relative;
+  top: 9.5rem;
+  left: 2.5rem;
+}
+
+.entrada-codigo-input {
+  background-color: var(--color-two);
+  position: relative;
+  top: -5rem;
+  border: none;
+  font-family: var(--fonte-one);
+  font-size: 2rem;
+  color: var(--color-one);
+  outline: none;
+  resize: none;
+}
+
+.saida-codigo-input {
+  display: none;
+  justify-content: center;
+  border: none;
+  outline: none;
+  font-family: var(--fonte-one);
+  font-size: 2rem;
+  width: 21rem;
+}
+
+.entrada-codigo-input::placeholder {
+  color: var(--color-one);
+  font-weight: 450;
+}
+
+.entrada-texto {
+  display: flex;
+  flex-flow: column;
+  gap: 1rem;
+  justify-content: flex-end;
+  /* position: relative;
+  bottom: 2.5rem; */
+}
+
+.entrada-texto-alerta {
+  display: flex;
+  font-size: 0.75rem;
+  gap: 0.5rem;
+}
+
+.entrada-texto img {
+  width: 1rem;
+}
+
+.botoes {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.botao {
+  font-size: 1rem;
+  border-radius: 1.5rem;
+  width: 20.5rem;
+  height: 4.1875rem;
+  border: solid 1px var(--color-one);
+  gap: 1.5rem;
+  cursor: pointer;
+}
+
+.botao-azul {
+  background-color: var(--color-one);
+  color: var(--color-three);
+}
+
+.botao-cinza {
+  background-color: var(--color-two);
+  color: var(--color-one);
+}
+
+.botao-cinza2 {
+  /* display: none; */
+  background-color: var(--color-three);
+  color: var(--color-one);
+  bottom: -20rem !important;
+  bottom: 25rem;
+  visibility: hidden;
+}
+
+.botao-copiar {
+  display: block;
+  position: relative;
+  bottom: -8.5rem;
+}
+
+.saida-texto {
+  display: flex;
+  flex-flow: column;
+  width: 25rem;
+  background-color: var(--color-three);
+  border-radius: 2rem;
+  height: 59rem;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  /* left: 7.5rem;*/
+  gap: 2rem;
+  box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.1);
+}
+
+.saida-texto img {
+  width: 21rem;
+  visibility: visible;
+}
+
+.saida-cripto {
+  font-family: var(--fonte-one);
+  color: var(--color-font);
+  font-size: 1.5rem;
+}
+
+.saida-texto-msg {
+  display: flex;
+  flex-flow: column;
+  gap: 1rem;
+  visibility: visible;
+}
+
+.saida-h2 {
+  width: 21rem;
+  font-size: 1.5rem;
+  color: var(--color-font);
+  text-align: center;
+  visibility: visible;
+}
+
+.saida-p {
+  width: 21rem;
+  font-size: 1rem;
+  color: var(--color-font);
+  text-align: center;
+  visibility: visible;
+}
+
+.rodape {
+  color: var(--color-one);
+  padding: 0.5rem;
+  text-align: center;
+  font-family: var(--fonte-one);
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.rodape:hover {
+  color: var(--color-three);
+  background-color: var(--color-one);
+}
+
+.rodape a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.rodape a:hover {
+  text-decoration: none;
+  color: var(--color-three);
+}
+
+@media (max-width: 48rem) {
+  .cabecalho img {
+    left: 1rem;
+    top: 4.58875rem;
+  }
+
+  .container {
+    flex-flow: column;
+    justify-items: center;
+    gap: 4rem;
+  }
+
+  .entrada {
+    gap: 26rem;
+  }
+
+  .entrada-codigo-input {
+    position: relative;
+    left: 1.5rem;
+    top: 5.25rem;
+  }
+
+  .saida-texto {
+    height: 8.3125rem;
+    width: 43rem;
+    align-items: center;
+    position: relative;
+    left: 2.5rem;
+  }
+
+  .saida-texto img {
+    display: none;
+  }
+
+  .saida-texto-msg {
+    gap: 1rem;
+  }
+
+  .saida-h2 {
+    width: auto;
+  }
+
+  .saida-p {
+    width: auto;
+  }
+}
+
+@media (max-width: 23.4375rem) {
+  .cabecalho img {
+    display: inline-block;
+    position: relative;
+    left: -1rem;
+    top: 1.5rem;
+  }
+}
