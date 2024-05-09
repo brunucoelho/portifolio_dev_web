@@ -1,61 +1,179 @@
 /* Variáveis */
 :root {
-    --global-primary-color: #ff577f;
-    --global-secundary-color: #2b2b2b;
-  
-    --global-font: "Lato", sans-serif;
-    --global-font-secondary: "Do Hyeon", sans-serif;
+  --global-primary-color: #ff577f;
+  --global-secundary-color: #2b2b2b;
+
+  --global-color-font: #f6f6f6;
+  --global-color-font-second: #b9b9b9;
+
+  --global-font: "Lato", sans-serif;
+  --global-font-secondary: "Do Hyeon", sans-serif;
+}
+
+/* @import url(https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap); */
+
+* {
+  font-family: var(--global-font);
+  margin: 0;
+  padding: 0;
+  background-image: url(/assets/BackgroundCodigos.svg);
+  background-color: var(--global-secundary-color);
+}
+
+/* Cabeçalho */
+
+.cabecalho {
+  display: flex;
+  gap: 4rem;
+  justify-content: center;
+  /* transform: translateY(3.1875rem); */
+}
+
+.cabecalho-icon {
+  color: var(--global-primary-color);
+  font-family: var(--global-font-secondary);
+  font-size: 1.5rem;
+  display: flex;
+  gap: 0.5rem;
+  font-weight: 400;
+  position: relative; /* Para permitir que o pseudo-elemento seja posicionado relativamente a este elemento */
+  text-decoration: none;
+  /* content: ""; /* Adicionando um pseudo-elemento para criar o sublinhado 
+  position: absolute; */
+
+  &::hover {
+    transform: translateY(-2px);
   }
-  
-  /* @import url(https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap); */
-  
-  * {
-    font-family: var(--global-font);
-    margin: 0;
-    padding: 0;
-    background-image: url(/assets/BackgroundCodigos.svg);
-    background-color: var(--global-secundary-color);
-  }
-  
-  /* Cabeçalho */
-  
-  .cabecalho {
-    display: flex;
-    gap: 4rem;
-    justify-content: center;
-    transform: translateY(3.1875rem);
-  }
-  
-  .cabecalho-icon {
-    color: var(--global-primary-color);
-    font-family: var(--global-font-secondary);
-    font-size: 1.5rem;
-    display: flex;
-    gap: 0.5rem;
-    font-weight: 400;
-    position: relative; /* Para permitir que o pseudo-elemento seja posicionado relativamente a este elemento */
+}
+
+.cabecalho-icon::after {
+  content: ""; /* Adicionando um pseudo-elemento para criar o sublinhado */
+  position: absolute;
+  transform: translateY(0.25rem); /* Posicionando o pseudo-elemento */
+  left: 0; /* Posicionando o pseudo-elemento à esquerda */
+  bottom: 0; /* Posicionando o pseudo-elemento na parte inferior */
+  width: 0; /* Inicialmente, a largura será 0 */
+  height: 3px; /* Espessura da linha */
+  background-color: var(--global-primary-color); /* Cor da linha */
+  transition: width 0.5s ease; /* Transição suave da largura */
+}
+
+.cabecalho-icon:hover::after {
+  width: 100%; /* Quando o mouse estiver sobre o elemento, a largura aumentará para 100% */
+}
+
+.cabecalho-pagina-ativa::after {
+  width: 100%; /* Define a largura total sem transição */
+}
+
+/* Seção da Página */
+
+.secao-pagina {
+  /* width: 77.875rem; */
+  display: flex;
+  /* flex-flow: column; */
+  gap: 13.25rem;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+/* Conteúdo pessoal */
+.conteudo-pessoal {
+  display: flex;
+  flex-flow: column;
+  gap: 3.125rem;
+  width: 34.25rem;
+}
+
+/* Apresentação */
+
+.apresentacao {
+  display: flex;
+  flex-flow: column;
+  gap: 2rem;
+}
+
+.apresentacao-title {
+  font-family: var(--global-font-secondary);
+  color: var(--global-color-font);
+  font-size: 2.25rem;
+  font-weight: 400;
+}
+
+.apresentacao-sobrenome {
+  font-family: var(--global-font-secondary);
+  color: var(--global-primary-color);
+}
+
+/* .apresentacao-title p {
+  font-family: var(--global-font-secondary);
+  color: var(--global-primary-color);
+} */
+
+.apresentacao-text {
+  color: var(--global-color-font);
+  font-size: 1.5rem;
+  text-align: justify;
+}
+
+.apresentacao-redes {
+  display: flex;
+  flex-flow: column;
+  gap: 1.5625rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.apresentacao-subtitle {
+  color: var(--global-color-font);
+  font-family: var(--global-font-secondary);
+  font-size: 1.5rem;
+}
+
+.apresentacao-links {
+  display: flex;
+  flex-flow: column;
+  gap: 2rem;
+}
+
+.apresentacao-link {
+  text-decoration: none;
+}
+
+.botao {
+  width: 23.3755rem;
+  height: 4.25rem;
+  border: solid 0.125rem var(--global-primary-color);
+  border-radius: 0.5rem;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.perfil-img {
+  width: 30.5rem;
+}
+
+.rodape-signature {
+  display: flex;
+  flex-flow: column;
+  gap: 1.5625rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.rodape-my-logo {
+  width: 8.125rem;
+  /* height: 3.875rem; */
+}
+
+.rodape-texto {
+  color: var(--global-color-font-second);
+
+  a {
+    color: var(--global-color-font-second);
     text-decoration: none;
-    content: ""; /* Adicionando um pseudo-elemento para criar o sublinhado */
-    /* position: absolute; */
   }
-  
-  .cabecalho-icon::after {
-    content: ""; /* Adicionando um pseudo-elemento para criar o sublinhado */
-    position: absolute;
-    transform: translateY(0.25rem); /* Posicionando o pseudo-elemento */
-    left: 0; /* Posicionando o pseudo-elemento à esquerda */
-    bottom: 0; /* Posicionando o pseudo-elemento na parte inferior */
-    width: 0; /* Inicialmente, a largura será 0 */
-    height: 3px; /* Espessura da linha */
-    background-color: var(--global-primary-color); /* Cor da linha */
-    transition: width 0.5s ease; /* Transição suave da largura */
-  }
-  
-  .cabecalho-icon:hover::after {
-    width: 100%; /* Quando o mouse estiver sobre o elemento, a largura aumentará para 100% */
-  }
-  
-  .cabecalho-pagina-ativa::after {
-    width: 100%; /* Define a largura total sem transição */
-  }
-  
+}
