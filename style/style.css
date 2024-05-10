@@ -1,6 +1,7 @@
 /* Variáveis */
 :root {
-  --global-primary-color: #ff577f;
+  --global-primary-color: rgb(255, 87, 127);
+  --global-primary-color-opacity: rgba(255, 87, 127, 0.25);
   --global-secundary-color: #2b2b2b;
 
   --global-color-font: #f6f6f6;
@@ -26,6 +27,7 @@
   display: flex;
   gap: 4rem;
   justify-content: center;
+  padding: 3.1875rem 0 0 0;
   /* transform: translateY(3.1875rem); */
 }
 
@@ -153,10 +155,18 @@
 }
 
 .perfil-img {
-  width: 30.5rem;
+  width: 31.25rem;
+}
+
+/* Rodapé */
+
+.rodape {
+  padding: 7.3125rem 0 0 0;
 }
 
 .rodape-signature {
+  border-top: 0.125rem solid var(--global-primary-color-opacity);
+  height: 10.5rem;
   display: flex;
   flex-flow: column;
   gap: 1.5625rem;
