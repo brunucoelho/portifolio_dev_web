@@ -239,6 +239,8 @@
   border-radius: 1rem;
   position: relative;
   z-index: 1;
+  width: 23.9375rem;
+  height: 15.9375rem;
 }
 
 .imagem-com-borda::before {
@@ -298,23 +300,50 @@
 }
 
 @media (max-width: 360px) {
+
+  * {
+    background-image: none;
+  }
+
   .secao-pagina {
     flex-flow: column-reverse;
     gap: 3.125rem;
+    align-items: center;
+    justify-content: center;
     /* width: 50%; */
+  }
+
+  .conteudo-pessoal {
+    width: 20.25rem;
   }
 
   .imagem-com-borda-index img {
     width: 19.1875rem;
     height: 21.8125rem;
-    border-radius: 1rem;
+    /* border-radius: 1rem; */
+  }
+
+  .imagem-com-borda img {
+    width: 19.375rem;
   }
 
   .cabecalho {
     /* display: flex; */
     gap: 1.5rem;
     justify-content: center;
-    padding: 2.5rem 0 2.5rem 0;
+    padding: 2.5rem 0 3.125rem 0;
+  }
+
+  .apresentacao {
+    width: 20rem;
+  }
+
+  .apresentacao-redes {
+    width: 20.25rem;
+  }
+
+  .botao {
+    width: 20rem;
   }
 
   .cabecalho-icon {
@@ -332,5 +361,27 @@
 
   .apresentacao-sobrenome {
     font-size: 2.25rem;
+  }
+
+  .apresentacao-text-projetos {
+    width: 20rem;
+  }
+
+  .perfil-img {
+    width: 20rem;
+  }
+
+  .secao-projeto {
+    display: flex;
+    flex-flow: column;
+    padding: 0 0 3.9375rem 0;
+  }
+
+  .apresentacao-projeto {
+    padding: 0 0 0 0;
+  }
+  .apresentacao-projetos {
+    flex-flow: column;
+    gap: 2.625rem;
   }
 }
