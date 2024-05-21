@@ -17,7 +17,7 @@
   font-family: var(--global-font);
   margin: 0;
   padding: 0;
-  background-image: url(/assets/BackgroundCodigos.svg);
+  background-image: url(/assets/backgroundCodigos.png);
   background-color: var(--global-secundary-color);
 }
 
@@ -114,6 +114,13 @@
   gap: 2rem;
 }
 
+.apresentacao-js {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  gap: 0.5rem;
+}
+
 .apresentacao-projeto {
   padding: 3.25rem 0 0 0;
 }
@@ -123,6 +130,56 @@
   color: var(--global-color-font);
   font-size: 2.25rem;
   font-weight: 400;
+}
+
+.apresentacao-title-h {
+  font-family: var(--global-font-secondary);
+  color: var(--global-color-font);
+  font-size: 2.25rem;
+  font-weight: 400;
+}
+
+.apresentacao-title-p {
+  font-family: var(--global-font-secondary);
+  color: var(--global-color-font);
+  font-size: 2.25rem;
+  font-weight: 400;
+}
+
+.apresentacao-sobrenome {
+  font-size: 2.25rem;
+}
+
+.apresentacao-sobrenome-h {
+  font-size: 2.25rem;
+  font-family: var(--global-font-secondary);
+  color: var(--global-primary-color);
+}
+
+.apresentacao-sobrenome-p {
+  font-size: 2.25rem;
+  font-family: var(--global-font-secondary);
+  color: var(--global-primary-color);
+}
+
+/* #nome-autor::after {
+  content: "|";
+  animation: piscar 1s infinite;
+} */
+
+#sobrenome-autor::after {
+  content: "|";
+  animation: piscar 2s infinite;
+}
+
+#minhas-habilidades2::after {
+  content: "|";
+  animation: piscar 2s infinite;
+}
+
+#meus-projetos::after {
+  content: "|";
+  animation: piscar 2s infinite;
 }
 
 .apresentacao-title-projetos {
@@ -299,8 +356,7 @@
   }
 }
 
-@media (max-width: 360px) {
-
+@media (max-width: 400px) {
   * {
     background-image: none;
   }
@@ -359,7 +415,15 @@
     font-size: 2.25rem;
   }
 
+  .apresentacao-title-h {
+    font-size: 2.25rem;
+  }
+
   .apresentacao-sobrenome {
+    font-size: 2.25rem;
+  }
+
+  .apresentacao-sobrenome-h {
     font-size: 2.25rem;
   }
 
@@ -383,5 +447,17 @@
   .apresentacao-projetos {
     flex-flow: column;
     gap: 2.625rem;
+  }
+}
+
+@keyframes piscar {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
